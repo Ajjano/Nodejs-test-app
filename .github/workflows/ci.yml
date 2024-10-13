@@ -15,4 +15,6 @@ jobs:
         shell: bash
       - name: Prepare environment
         run: npm run infra:start
+      - name: Build Docker image
+        run: docker build -t node-js-test .
      
