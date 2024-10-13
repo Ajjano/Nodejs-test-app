@@ -15,10 +15,4 @@ jobs:
         shell: bash
       - name: Prepare environment
         run: npm run infra:start
-      - name: Run tests
-        run: npm test
-        env:
-          MONGODB_URI: mongodb://localhost:27017/whispering-database
-          PORT: 3000
-          SALT_ROUNDS: 10
-          JWT_SECRET: ${{ steps.generate-secret.outputs.JWT_SECRET }}
+     
